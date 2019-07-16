@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 ENV KAFKA_VERSION 0.8.2.1
 ENV SCALA_VERSION 2.10
 RUN wget -q \
-    http://apache.mirrors.spacedump.net/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz \
+    https://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz \
     -O /tmp/kafka.tgz \
     && tar xfz /tmp/kafka.tgz -C /opt \
     && rm /tmp/kafka.tgz \
